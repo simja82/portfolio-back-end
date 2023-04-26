@@ -50,7 +50,7 @@ public class AudiovisualPresentationService {
             existingAudiovisualPresentation.setParagraph(newAudiovisualPresentation.getParagraph());
             audiovisualPresentationInterface.save(existingAudiovisualPresentation);
         } else {
-            throw new IllegalArgumentException("Nope... No podés actualizar una presentación inexistente...");
+            throw new IllegalArgumentException("Nope... No podés actualizar una Presentación Audiovisual inexistente...");
         }
     }    
     
