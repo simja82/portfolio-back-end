@@ -2,18 +2,18 @@
 En este documento se deja constancia de todo lo realizado en la rama del repositorio presente que contiene el primer back-end del Trabajo Práctico Final e Integrador de YoProgramo, segunda etapa de Argentina Programa
 
 ## Tecnologías
-La versión de Spring Boot es la: 3.0.4
+La versión de Spring Boot es la: 3.0.4<br>
 La versión de Java es la: 17
 
 ## Dependencias
 Este proyecto cuenta con las siguientes dependencias:
 
-Spring Boot Starter Data JPA
-Spring Boot Starter Web
-Spring Boot Devtools
-MySQL Connector-J
-Lombok
-Spring Boot Starter Test
+Spring Boot Starter Data JPA<br>
+Spring Boot Starter Web<br>
+Spring Boot Devtools<br>
+MySQL Connector-J<br>
+Lombok<br>
+Spring Boot Starter Test<br>
 Jakarta Validation API
 
 ## Características
