@@ -23,17 +23,9 @@ public class DeveloperProfile {
     private String icon;
     
     @NotNull
-    @Column(name="title", length=45)
-    private String title;
-    
-    @NotNull
     @Column(name="name_intro", length=255)
     private String name_intro;
-    
-    @NotNull
-    @Column(name="fullname", length=100)
-    private String fullname;
-    
+
     @NotNull
     @Column(name="line_one", length=150)
     private String line_one;    
@@ -61,12 +53,10 @@ public class DeveloperProfile {
     public DeveloperProfile() {
     }
 
-    public DeveloperProfile (int id, String icon, String title, String name_intro, String fullname, String line_one, String photo, String phrase_one, String phrase_two, String author, String credit) {
+    public DeveloperProfile (int id, String icon, String name_intro, String line_one, String photo, String phrase_one, String phrase_two, String author, String credit) {
         this.id = id;
         this.icon = icon;
-        this.title = title;
         this.name_intro = name_intro;
-        this.fullname = fullname;
         this.line_one = line_one;        
         this.photo = photo;
         this.phrase_one = phrase_one;

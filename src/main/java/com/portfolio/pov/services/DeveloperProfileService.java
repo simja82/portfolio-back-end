@@ -37,9 +37,9 @@ public class DeveloperProfileService {
         if (optionalDeveloperProfile.isPresent()) {
             DeveloperProfile existingDeveloperProfile = optionalDeveloperProfile.get();
             existingDeveloperProfile.setIcon(newDeveloperProfile.getIcon());
-            existingDeveloperProfile.setTitle(newDeveloperProfile.getTitle());
+            //existingDeveloperProfile.setTitle(newDeveloperProfile.getTitle());
             existingDeveloperProfile.setName_intro(newDeveloperProfile.getName_intro());
-            existingDeveloperProfile.setFullname(newDeveloperProfile.getFullname());
+            // existingDeveloperProfile.setFullname(newDeveloperProfile.getFullname());
             existingDeveloperProfile.setLine_one(newDeveloperProfile.getLine_one()); 
             existingDeveloperProfile.setPhoto(newDeveloperProfile.getPhoto());
             existingDeveloperProfile.setPhrase_one(newDeveloperProfile.getPhrase_one());

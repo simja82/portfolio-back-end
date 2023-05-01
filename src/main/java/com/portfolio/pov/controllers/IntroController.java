@@ -26,6 +26,7 @@ public class IntroController {
     @Autowired
     IntroService introService;
     
+    /*
     //Listar
     @GetMapping("/list") 
     @ResponseBody 
@@ -61,4 +62,18 @@ public class IntroController {
         introService.deleteIntro(id);
         return "Espero que no te arrepientas... Borraste la intro...";
     }    
+    
+    */
+    
+    	@GetMapping("/intro/{id}")
+	@ResponseBody
+	public Intro cargarItem(@PathVariable Long id){
+		return introService.cargarItem(id);
+	}
+	
+	@PutMapping("/intro")
+	public String modificarItem(@RequestBody Intro intro){
+		introService.modificarItem(intro);
+		return "La intro fue modificada correctamente!!";
+	}
 }

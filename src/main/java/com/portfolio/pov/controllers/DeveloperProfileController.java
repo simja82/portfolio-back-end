@@ -19,7 +19,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @CrossOrigin(origins = "http://localhost:4200")
 //@CrossOrigin(origins = "https://pov-portfolio.web.app/")
-@RequestMapping("developerprofile")
+@RequestMapping("developer_profile")
 public class DeveloperProfileController {
     
     //Enlazado

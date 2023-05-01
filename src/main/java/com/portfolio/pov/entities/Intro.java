@@ -16,12 +16,13 @@ public class Intro {
     
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
-    int id;
+    Long id;
     
     @NotNull
     @Column(name="overview", length=100)
     private String overview;
     
+    /*
     @NotNull
     @Column(name="industry", length=100)
     private String industry;    
@@ -36,17 +37,21 @@ public class Intro {
 
     @NotNull
     @Column(name="line_two", length=200)
-    private String line_two;      
+    private String line_two;  
+
+    */    
 
     public Intro() {
     }
 
-    public Intro (int id, String overview, String industry, String history, String line_one, String line_two) {
+    public Intro (Long id, String overview/*, String industry, String history, String line_one, String line_two*/) {
         this.id = id;
         this.overview = overview;
+    /*
         this.industry = industry;
         this.history = history;
         this.line_one = line_one;
-        this.line_two = line_two;        
+        this.line_two = line_two; 
+*/
     }
 }
