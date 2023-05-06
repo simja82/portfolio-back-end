@@ -36,7 +36,7 @@ public class StudyController {
     //Encontrar 
     @GetMapping("/find/{id}")
     @ResponseBody 
-    public Study findStudy(@PathVariable int id){
+    public Study findStudy(@PathVariable Long id){
         return studyService.findStudy(id);  
     }
     
@@ -49,15 +49,23 @@ public class StudyController {
     }
     
     //Editar
+    /*
     @PutMapping("/update/{id}")   
     public String updateStudy(@PathVariable int id, @RequestBody Study study){
         studyService.updateStudy(id, study);
         return "Ok. Actualizaste el estudio.";
     }
+    */
+    
+    @PutMapping("/update")
+    public String updateStudy(@RequestBody Study study){
+        studyService.updateStudy(study);
+        return "Ok. Actualizaste el Estudio!!!";
+    }    
     
     //Eliminar
     @DeleteMapping("/delete/{id}")
-    public String deleteStudy(@PathVariable int id){
+    public String deleteStudy(@PathVariable Long id){
         studyService.deleteStudy(id);
         return "Espero que no te arrepientas... Borraste el Estudio...";
     }    

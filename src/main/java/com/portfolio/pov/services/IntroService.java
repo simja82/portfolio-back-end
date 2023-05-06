@@ -3,8 +3,8 @@ package com.portfolio.pov.services;
 import com.portfolio.pov.entities.Intro;
 import com.portfolio.pov.interfaces.IntroInterface;
 
-//import java.util.List;
-//import java.util.Optional;
+import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -15,14 +15,14 @@ public class IntroService {
     //Enlazado
     @Autowired  
     IntroInterface introInterface;
-/*
+
     //Listar
     public List<Intro> getIntros() {
         return introInterface.findAll();
     }
     
     //Encontrar
-    public Intro findIntro(Integer id) {
+    public Intro findIntro(Long id) {
         return introInterface.findById(id).orElse(null);   
     }
     
@@ -32,7 +32,8 @@ public class IntroService {
     }
     
     //Editar
-    public void updateIntro(int id, Intro newIntro) {
+    /*
+    public void updateIntro(Long id, Intro newIntro) {
         Optional<Intro> optionalIntro = introInterface.findById(id);
         if (optionalIntro.isPresent()) {
             Intro existingIntro = optionalIntro.get();
@@ -45,26 +46,16 @@ public class IntroService {
         } else {
             throw new IllegalArgumentException("Nope... No podés actualizar una intro inexistente...");
         }
-    }    
+    } 
+    */
+
+    public void updateIntro(Intro intro){	
+        introInterface.save(intro);
+    }     
     
     //Eliminar
-    public void deleteIntro(Integer id) {
+    public void deleteIntro(Long id) {
         introInterface.deleteById(id);
-    }    
-    
-    */
-    
-    
-    	public Intro cargarItem(Long id){
-		return introInterface.findById(id).orElse(null);
-	}
-	
-	
-	public void modificarItem(Intro intro){
-		introInterface.save(intro);
-	}
-        
-        
-        
-        
+    }
+           
 }

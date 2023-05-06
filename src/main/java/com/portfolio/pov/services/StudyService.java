@@ -22,7 +22,7 @@ public class StudyService {
     }
     
     //Encontrar
-    public Study findStudy(Integer id) {
+    public Study findStudy(Long id) {
         return studyInterface.findById(id).orElse(null);   
     }
     
@@ -32,6 +32,7 @@ public class StudyService {
     }
     
     //Editar
+    /*
     public void updateStudy(int id, Study newStudy) {
         Optional<Study> optionalStudy = studyInterface.findById(id);
         if (optionalStudy.isPresent()) {
@@ -46,9 +47,13 @@ public class StudyService {
             throw new IllegalArgumentException("Nope... No podés actualizar un estudio inexistente...");
         }
     }    
+    */
     
+    public void updateStudy(Study study){	
+        studyInterface.save(study);
+    }     
     //Eliminar
-    public void deleteStudy(Integer id) {
+    public void deleteStudy(Long id) {
         studyInterface.deleteById(id);
     }    
 }

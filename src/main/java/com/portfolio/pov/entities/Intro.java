@@ -4,7 +4,7 @@ package com.portfolio.pov.entities;
 
 import jakarta.persistence.*;
 
-import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.NotBlank;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -18,40 +18,34 @@ public class Intro {
     @GeneratedValue(strategy=GenerationType.IDENTITY)
     Long id;
     
-    @NotNull
+    @NotBlank
     @Column(name="overview", length=100)
     private String overview;
     
-    /*
-    @NotNull
+    @NotBlank
     @Column(name="industry", length=100)
     private String industry;    
     
-    @NotNull
+    @NotBlank
     @Column(name="history", length=50)
     private String history;  
 
-    @NotNull
+    @NotBlank
     @Column(name="line_one", length=200)
     private String line_one;  
 
-    @NotNull
+    @NotBlank
     @Column(name="line_two", length=200)
     private String line_two;  
-
-    */    
 
     public Intro() {
     }
 
-    public Intro (Long id, String overview/*, String industry, String history, String line_one, String line_two*/) {
-        this.id = id;
+    public Intro (String overview, String industry, String history, String line_one, String line_two) {
         this.overview = overview;
-    /*
         this.industry = industry;
         this.history = history;
         this.line_one = line_one;
         this.line_two = line_two; 
-*/
     }
 }
