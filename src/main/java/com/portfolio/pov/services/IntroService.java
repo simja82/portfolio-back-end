@@ -4,7 +4,6 @@ import com.portfolio.pov.entities.Intro;
 import com.portfolio.pov.interfaces.IntroInterface;
 
 import java.util.List;
-//import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -32,23 +31,6 @@ public class IntroService {
     }
     
     //Editar
-    /*
-    public void updateIntro(Long id, Intro newIntro) {
-        Optional<Intro> optionalIntro = introInterface.findById(id);
-        if (optionalIntro.isPresent()) {
-            Intro existingIntro = optionalIntro.get();
-            existingIntro.setOverview(newIntro.getOverview());
-            existingIntro.setIndustry(newIntro.getIndustry());
-            existingIntro.setHistory(newIntro.getHistory());
-            existingIntro.setLine_one(newIntro.getLine_one());
-            existingIntro.setLine_two(newIntro.getLine_two());                     
-            introInterface.save(existingIntro);
-        } else {
-            throw new IllegalArgumentException("Nope... No podés actualizar una intro inexistente...");
-        }
-    } 
-    */
-
     public void updateIntro(Intro intro){	
         introInterface.save(intro);
     }     
