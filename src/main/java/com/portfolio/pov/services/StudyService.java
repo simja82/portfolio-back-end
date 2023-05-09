@@ -39,5 +39,5 @@ public class StudyService {
     public void deleteStudy(Long id) {
         studyInterface.deleteById(id);
     }  
-    
+        
 }

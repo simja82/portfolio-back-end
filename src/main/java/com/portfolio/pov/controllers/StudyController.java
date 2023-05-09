@@ -42,12 +42,12 @@ public class StudyController {
     }
     
     //Editar    
-    @PutMapping("/update")
+    @PutMapping("/update/{id}")   
     public String updateStudy(@RequestBody Study study){
         studyService.updateStudy(study);
         return "Ok. Actualizaste el Estudio!!!";
-    }    
-    
+    }
+     
     //Eliminar
     @DeleteMapping("/delete/{id}")
     public String deleteStudy(@PathVariable Long id){
