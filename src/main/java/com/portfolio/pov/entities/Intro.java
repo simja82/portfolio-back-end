@@ -15,8 +15,8 @@ import lombok.Setter;
 public class Intro {
     
     @Id
-    @GeneratedValue(strategy=GenerationType.IDENTITY)
-    Long id;
+    @GeneratedValue(strategy=GenerationType.AUTO)
+    int id;
     
     @NotBlank
     @Column(name="overview", length=100)
@@ -31,11 +31,11 @@ public class Intro {
     private String history;  
 
     @NotBlank
-    @Column(name="line_one", length=200)
+    @Column(name="line_one", length=255)
     private String line_one;  
 
     @NotBlank
-    @Column(name="line_two", length=200)
+    @Column(name="line_two", length=255)
     private String line_two;  
 
     public Intro() {
@@ -48,4 +48,5 @@ public class Intro {
         this.line_one = line_one;
         this.line_two = line_two; 
     }
+    
 }

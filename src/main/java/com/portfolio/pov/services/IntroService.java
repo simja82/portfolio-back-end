@@ -1,7 +1,7 @@
 package com.portfolio.pov.services;
 
 import com.portfolio.pov.entities.Intro;
-import com.portfolio.pov.interfaces.IntroInterface;
+import com.portfolio.pov.repositories.IntroRepository;
 
 import java.util.List;
 
@@ -13,31 +13,31 @@ public class IntroService {
     
     //Enlazado
     @Autowired  
-    IntroInterface introInterface;
+    IntroRepository introRepository;
 
     //Listar
     public List<Intro> getIntros() {
-        return introInterface.findAll();
+        return introRepository.findAll();
     }
     
     //Encontrar
-    public Intro findIntro(Long id) {
-        return introInterface.findById(id).orElse(null);   
+    public Intro findIntro(int id) {
+        return introRepository.findById(id).orElse(null);   
     }
     
     //Crear
     public void saveIntro(Intro intro) {
-        introInterface.save(intro);  
+        introRepository.save(intro);  
     }
     
     //Editar
     public void updateIntro(Intro intro){	
-        introInterface.save(intro);
+        introRepository.save(intro);
     }     
     
     //Eliminar
-    public void deleteIntro(Long id) {
-        introInterface.deleteById(id);
+    public void deleteIntro(int id) {
+        introRepository.deleteById(id);
     }
            
 }

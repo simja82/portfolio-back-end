@@ -1,4 +1,4 @@
-//Corresponde a Educación Developer
+//Corresponde a Educación
 //Se accede desde el Dashboard Developer botón Educación
 package com.portfolio.pov.entities;
 
@@ -16,10 +16,10 @@ public class Study {
     
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
-    Long id;   
+    int id;   
    
     @NotBlank
-    @Column(name="image", length=255)
+    @Column(name="image")
     private String image;
 
     @NotBlank
@@ -48,4 +48,5 @@ public class Study {
         this.start_date = start_date;
         this.end_date = end_date;      
     }
+
 }

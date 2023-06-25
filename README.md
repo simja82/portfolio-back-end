@@ -2,7 +2,7 @@
 En este documento se deja constancia de todo lo realizado en la rama del repositorio presente que contiene el primer back-end del Trabajo Práctico Final e Integrador de YoProgramo, segunda etapa de Argentina Programa
 
 ## Tecnologías
-La versión de Spring Boot es la: 3.0.4<br>
+La versión de Spring Boot es la: 3.1.0<br>
 La versión de Java es la: 17
 
 ## Dependencias
@@ -17,9 +17,9 @@ Spring Boot Starter Test<br>
 Jakarta Validation API
 
 ## Características
-Esta parte del trabajo contiene los paquetes: Entities, Interfaces, Services y Controllers
+Esta parte del trabajo contiene los paquetes: Entities, Repositories, Services y Controllers
 
-A cada Entidad le corresponde una Interface, un Service y un Controller, capas que están identificadas por el nombre de la Entidad seguido del tipo de capa y siempre dentro de su paquete correspondiente.
+A cada Entidad le corresponde un Repository, un Service y un Controller, capas que están identificadas por el nombre de la Entidad seguido del tipo de capa y siempre dentro de su paquete correspondiente.
 
 Todas las Entidades tienen su nombre en singular y se corresponden con distintas partes del front-end para las cuales se suman por medio de ellas tablas con nombres en plural.
 

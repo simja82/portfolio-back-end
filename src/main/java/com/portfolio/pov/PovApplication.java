@@ -1,4 +1,3 @@
-//POV Portfolio
 package com.portfolio.pov;
 
 import org.springframework.boot.SpringApplication;

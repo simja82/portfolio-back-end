@@ -1,7 +1,9 @@
 package com.portfolio.pov.services;
 
 import com.portfolio.pov.entities.Study;
-import com.portfolio.pov.interfaces.StudyInterface;
+import com.portfolio.pov.repositories.StudyRepository;
+
+import jakarta.transaction.Transactional;
 
 import java.util.List;
 
@@ -9,35 +11,36 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
+@Transactional
 public class StudyService {
     
     //Enlazado
     @Autowired  
-    StudyInterface studyInterface;
+    StudyRepository studyRepository;
 
     //Listar
     public List<Study> getStudies() {
-        return studyInterface.findAll();
+        return studyRepository.findAll();
     }
-    
+
     //Encontrar
-    public Study findStudy(Long id) {
-        return studyInterface.findById(id).orElse(null);   
+    public Study findStudy(Integer id) {
+        return studyRepository.findById(id).orElse(null);   
     }
     
     //Crear
     public void saveStudy(Study study) {
-        studyInterface.save(study);  
+        studyRepository.save(study);
     }
     
-    //Editar    
-    public void updateStudy(Study study){	
-        studyInterface.save(study);
-    }  
+    //Editar
+    public void updateStudy(Study study) {
+        studyRepository.save(study);
+    }
     
     //Eliminar
-    public void deleteStudy(Long id) {
-        studyInterface.deleteById(id);
-    }  
-        
+    public void deleteStudy(Integer id) {
+        studyRepository.deleteById(id);
+    }
+    
 }

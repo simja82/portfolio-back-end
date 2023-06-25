@@ -1,17 +1,17 @@
 package com.portfolio.pov.controllers;
 
-import com.portfolio.pov.entities.Intro;
-import com.portfolio.pov.services.IntroService;
-
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
 import org.springframework.web.bind.annotation.*;
 
+import com.portfolio.pov.entities.Intro;
+import com.portfolio.pov.services.IntroService;
+
 @RestController
-@CrossOrigin(origins = "http://localhost:4200")
-//@CrossOrigin(origins = "https://pov-portfolio.web.app/")
+//@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(origins = "https://pov-portfolio.web.app")
 @RequestMapping("intro")
 public class IntroController {
     
@@ -29,7 +29,7 @@ public class IntroController {
     //Encontrar 
     @GetMapping("/find/{id}")
     @ResponseBody 
-    public Intro findIntro(@PathVariable Long id){
+    public Intro findIntro(@PathVariable Integer id){
         return introService.findIntro(id);  
     }
     
@@ -50,7 +50,7 @@ public class IntroController {
     
     //Eliminar
     @DeleteMapping("/delete/{id}")
-    public String deleteIntro(@PathVariable Long id){
+    public String deleteIntro(@PathVariable Integer id){
         introService.deleteIntro(id);
         return "Espero que no te arrepientas... Borraste la Intro...";
     }    
