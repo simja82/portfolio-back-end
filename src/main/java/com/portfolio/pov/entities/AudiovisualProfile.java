@@ -4,7 +4,7 @@ package com.portfolio.pov.entities;
 
 import jakarta.persistence.*;
 
-import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.NotBlank;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -18,39 +18,38 @@ public class AudiovisualProfile {
     @GeneratedValue(strategy=GenerationType.IDENTITY)
     int id;   
    
-    @NotNull
+    @NotBlank
     @Column(name="title", length=45)
     private String title;
     
-    @NotNull
+    @NotBlank
     @Column(name="intro", length=250)
     private String intro;
     
-    @NotNull
+    @NotBlank
     @Column(name="photo", length=150)
     private String photo;
 
-    @NotNull
+    @NotBlank
     @Column(name="author", length=100)
     private String author;
     
-    @NotNull
+    @NotBlank
     @Column(name="credit", length=100)
     private String credit;
 
-    @NotNull
+    @NotBlank
     @Column(name="one", length=100)
     private String one;
     
-    @NotNull
+    @NotBlank
     @Column(name="two", length=100)
     private String two;     
         
     public AudiovisualProfile() {
     }
 
-    public AudiovisualProfile (int id, String title, String intro, String photo, String author, String credit, String one, String two) {
-        this.id = id;
+    public AudiovisualProfile (String title, String intro, String photo, String author, String credit, String one, String two) {
         this.title = title;
         this.intro = intro;
         this.photo = photo;

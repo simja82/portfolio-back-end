@@ -4,7 +4,7 @@ package com.portfolio.pov.entities;
 
 import jakarta.persistence.*;
 
-import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.NotBlank;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -18,19 +18,18 @@ public class Login {
     @GeneratedValue(strategy=GenerationType.IDENTITY)
     int id;   
         
-    @NotNull
+    @NotBlank
     @Column(name="image", length=150)
     private String image;
     
-    @NotNull
+    @NotBlank
     @Column(name="description", length=100)
     private String description;
         
     public Login() {
     }
 
-    public Login (int id, String image, String description) {
-        this.id = id;
+    public Login (String image, String description) {
         this.image = image;
         this.description = description;
     }

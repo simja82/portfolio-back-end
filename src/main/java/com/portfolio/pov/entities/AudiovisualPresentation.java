@@ -4,7 +4,7 @@ package com.portfolio.pov.entities;
 
 import jakarta.persistence.*;
 
-import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.NotBlank;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -18,59 +18,58 @@ public class AudiovisualPresentation {
     @GeneratedValue(strategy=GenerationType.IDENTITY)
     int id;   
    
-    @NotNull
+    @NotBlank
     @Column(name="title", length=50)
     private String title;
     
-    @NotNull
+    @NotBlank
     @Column(name="line_one", length=100)
     private String line_one;
     
-    @NotNull
+    @NotBlank
     @Column(name="line_two", length=100)
     private String line_two;
 
-    @NotNull
+    @NotBlank
     @Column(name="line_three", length=100)
     private String line_three;
     
-    @NotNull
+    @NotBlank
     @Column(name="minibio_icon", length=50)
     private String minibio_icon;
 
-    @NotNull
+    @NotBlank
     @Column(name="minibio_text", length=50)
     private String minibio_text;
 
-    @NotNull
+    @NotBlank
     @Column(name="mywork_icon", length=50)
     private String mywork_icon;
 
-    @NotNull
+    @NotBlank
     @Column(name="mywork_text", length=50)
     private String mywork_text;
 
-    @NotNull
+    @NotBlank
     @Column(name="iwant_icon", length=50)
     private String iwant_icon;
 
-    @NotNull
+    @NotBlank
     @Column(name="iwant_text", length=50)
     private String iwant_text;    
     
-    @NotNull
+    @NotBlank
     @Column(name="subtitle", length=100)
     private String subtitle;
 
-    @NotNull
+    @NotBlank
     @Column(name="paragraph", length=100)
     private String paragraph;    
         
     public AudiovisualPresentation() {
     }
 
-    public AudiovisualPresentation (int id, String title, String line_one, String line_two, String line_three, String minibio_icon, String minibio_text, String mywork_icon, String mywork_text, String iwant_icon, String iwant_text, String subtitle, String paragraph) {
-        this.id = id;
+    public AudiovisualPresentation (String title, String line_one, String line_two, String line_three, String minibio_icon, String minibio_text, String mywork_icon, String mywork_text, String iwant_icon, String iwant_text, String subtitle, String paragraph) {
         this.title = title;
         this.line_one = line_one;
         this.line_two = line_two;

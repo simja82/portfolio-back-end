@@ -4,7 +4,7 @@ package com.portfolio.pov.entities;
 
 import jakarta.persistence.*;
 
-import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.NotBlank;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -18,27 +18,26 @@ public class Cover {
     @GeneratedValue(strategy=GenerationType.IDENTITY)
     int id;   
    
-    @NotNull
+    @NotBlank
     @Column(name="title", length=100)
     private String title;
     
-    @NotNull
+    @NotBlank
     @Column(name="based", length=100)
     private String based;
 
-    @NotNull
+    @NotBlank
     @Column(name="draft", length=100)
     private String draft;
 
-    @NotNull
+    @NotBlank
     @Column(name="to_visitors", length=50)
     private String to_visitors;       
         
     public Cover() {
     }
 
-    public Cover (int id,String title, String based, String draft, String to_visitors) {
-        this.id = id;
+    public Cover (String title, String based, String draft, String to_visitors) {
         this.title = title;
         this.based = based;
         this.draft = draft;

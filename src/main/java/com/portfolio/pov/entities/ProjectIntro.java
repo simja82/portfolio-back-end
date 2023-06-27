@@ -4,7 +4,7 @@ package com.portfolio.pov.entities;
 
 import jakarta.persistence.*;
 
-import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.NotBlank;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -18,63 +18,62 @@ public class ProjectIntro {
     @GeneratedValue(strategy=GenerationType.IDENTITY)
     int id;   
    
-    @NotNull
+    @NotBlank
     @Column(name="title", length=100)
     private String title;
     
-    @NotNull
+    @NotBlank
     @Column(name="line_one", length=100)
     private String line_one;
     
-    @NotNull
+    @NotBlank
     @Column(name="line_two", length=100)
     private String line_two;
 
-    @NotNull
+    @NotBlank
     @Column(name="line_three", length=50)
     private String line_three;
     
-    @NotNull
+    @NotBlank
     @Column(name="series", length=50)
     private String series;
     
-    @NotNull
+    @NotBlank
     @Column(name="icon_series", length=50)
     private String icon_series;
 
-    @NotNull
+    @NotBlank
     @Column(name="longshots", length=50)
     private String longshots;
 
-    @NotNull
+    @NotBlank
     @Column(name="icon_longshots", length=50)
     private String icon_longshots;
 
-    @NotNull
+    @NotBlank
     @Column(name="others", length=50)
     private String others;    
 
-    @NotNull
+    @NotBlank
     @Column(name="icon_others", length=50)
     private String icon_others;
     
-    @NotNull
+    @NotBlank
     @Column(name="one_samples", length=100)
     private String one_samples;
 
-    @NotNull
+    @NotBlank
     @Column(name="two_samples", length=100)
     private String two_samples;    
 
-    @NotNull
+    @NotBlank
     @Column(name="three_samples", length=100)
     private String three_samples;    
     
     public ProjectIntro() {
     }
 
-    public ProjectIntro (int id, String title, String line_one, String line_two, String line_three, String series, String icon_series, String longshots, String icon_longshots, String others, String icon_others, String one_samples, String two_samples, String three_samples) {
-        this.id = id;
+    public ProjectIntro (String title, String line_one, String line_two, String line_three, String series, String icon_series, String longshots, String icon_longshots, String others, String icon_others, String one_samples, String two_samples, String three_samples) {
         this.title = title;
         this.line_one = line_one;
         this.line_two = line_two;

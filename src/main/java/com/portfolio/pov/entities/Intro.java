@@ -15,7 +15,7 @@ import lombok.Setter;
 public class Intro {
     
     @Id
-    @GeneratedValue(strategy=GenerationType.AUTO)
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
     int id;
     
     @NotBlank
